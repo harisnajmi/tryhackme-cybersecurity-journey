@@ -22,22 +22,25 @@ Explore the anatomy of an email, starting with the structure of an email address
 
 ### Task 1 — Reputable organization that is being spoofed
 ![Spoofed Organization](screenshots/01spoofed-organization.png)
-Email sender identifies as "Home Depot" however the email domain is "teckbe.com". This mismatch indicates spoofing of a reputable organization.
+
+- Email sender identifies as "Home Depot" however the email domain is "teckbe.com". This mismatch indicates spoofing of a reputable organization.
 
 ### Task 2 — Sender's email address
 ![Sender Email Address](screenshots/02sender-email-address.png)
-Identify the email address of the sender that is attempting to spoof.
+
+- Identify the email address of the sender that is attempting to spoof.
 
 ### Task 3 — Defanged X-Originating-IP
 ![X-Orignating-IP](screenshots/03x-originating-ip.png)
 ![Defang X-Originating-IP](screenshots/04defang-x-originating-ip.png)
 
-Identified x-originating-ip from message source and use Cyberchef "Defang IP addresses" recipe to defang the IP.
+- Identified x-originating-ip from message source and use Cyberchef "Defang IP addresses" recipe to defang the IP.
 
 ### Task 4 — Mail server generated the Authentication-Results header
 
 ![Mal Server](screenshots/05mail-server-generated.png)
-Identified the mail server that authenticated the email. ("Authentication-Results:")
+
+- Identified the mail server that authenticated the email. ("Authentication-Results:")
 
 ---
 

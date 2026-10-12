@@ -30,7 +30,7 @@ Identify the email address of the sender that is attempting to spoof.
 
 ### Task 3 — Defanged X-Originating-IP
 ![X-Orignating-IP](screenshots/03x-originating-ip.png)
-![Defang X-Originating-IP](screenshots/04defang-x-originating-ip)
+![Defang X-Originating-IP](screenshots/04defang-x-originating-ip.png)
 
 Identified x-originating-ip from message source and use Cyberchef "Defang IP addresses" recipe to defang the IP.
 

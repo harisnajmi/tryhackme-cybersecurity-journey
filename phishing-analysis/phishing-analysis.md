@@ -55,6 +55,97 @@ Explore the anatomy of an email, starting with the structure of an email address
 In an SOC live environment, it is important to know where to get these hidden information that may provide additional context and assist in identifying IOCs. A wealth of information is available to further strengthen verdict formation for L1 and context for escalation to L2 which will ensure a smooth and quick investigation. 
 
 ---
+## 2. Phishing Analysis Tools
+
+## Overview
+Build on that foundation by learning about the tools that enable deeper analysis, then apply skills by investigating three real-world phishing cases.
+### Objective
+
+- Understand what information should be collected during an email analysis
+- Learn about the tools that enable effective email investigation
+- Explore IP and URL analysis, including reputation lookups
+- Investigate phishing cases to apply your understanding and strengthen your analysis skills
+
+## Tools Highlighted
+
+| Tool | Purpose |
+|---|---|
+| Messageheader | analyze email headers |
+| IPinfo | gathering information about an IP address |
+| URLScan.io | safely investigate websites without visiting them directly |
+| Talos | tool from Cisco that enables analysts to assess the reputation of IP |
+| URL extraction tool | automatically parse all embedded links |
+| sha256sum | generate a hash value for further analysis and reputation checks |
+| VirusTotal | check the reputation of files, URLs, IP addresses, and domains |
+| ANY.RUN | interactive malware sandbox |
+| JOESandbox | advanced malware analysis |
+| PhishTool | centralized view of phishing activity, automates much of the manual work involved in analyzing suspicious emails |
+
+---
+
+## Phishing Case 1: Account On Hold Email Analysis
+
+### Task 1 — The reputable brand the email is impersonating
+![](screenshots/06spoofed-organization.png)
+
+### Task 2 — The intended recipient
+![](screenshots/07recepient.png)
+
+### Task 3 — The IP address "Received: from"
+![](screenshots/08received-from-ip.png)
+
+### Task 4 — Domain of interest from Return-Path
+![](screenshots/09copy-shortened-url.png)
+
+### Task 5 — Shortened URL of "Update Account Now"
+![](screenshots/10domain-of-interest.png)
+
+## Phishing Case 2: Update Payment Details Analysis
+
+### Task 1 — ANYRUN classify this suspected phishing email as 
+![](screenshots/11anyrun-classification.png)
+
+### Task 2 — Name of malicious PDF attachment
+![](screenshots/12paymentid-pdf.png)
+
+### Task 3 — MD5 hash of the PDF
+![](screenshots/13md5-hash.png)
+
+### Task 4 — PDF's malicious URL
+![](screenshots/14malicious-url.png)
+
+### Task 5 — DNS of malicious domain.
+![](screenshots/15malicious-dns.png)
+
+## Phishing Case 3: Executable File Analysis
+
+### Task 1 — Name of malicious Excel attachment
+![](screenshots/16malicious-file-name.png)
+
+### Task 2 — Suspicious process after attachment launch
+![](screenshots/17suspicious-process.png)
+
+### Task 3 — The full path to the malicious binary
+![](screenshots/18full-path.png)
+
+### Task 4 — CVE the file attempt to exploit
+![](screenshots/19cve-exploit.png)
+
+### Task 5 — Domain the malware was downloaded from
+![](screenshots/20malicious-domain-source.png)
+
+### Task 6 — Network threat associated with the download
+![](screenshots/21network-threat.png)
+
+---
+
+## Key Takeaways
+
+- **[Takeaway 1]** — 
+
+### Practical Application
+
+---
 
 ## Reusable Template 1
 ## x. Title/Room

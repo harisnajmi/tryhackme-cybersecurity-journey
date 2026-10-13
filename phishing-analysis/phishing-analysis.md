@@ -141,10 +141,10 @@ Build on that foundation by learning about the tools that enable deeper analysis
 
 ## Key Takeaways
 
-- **[Takeaway 1]** — 
+- **[Takeaway 1]** — The use of external tools automates IOC enrichment and quickens triage by substantial amount, however the fundamentals is still required to fully utilize such tools to its maximum effectiveness.
 
 ### Practical Application
-
+In a live SOC environment, 3rd party tools and services significantly reduces the time to execute a triage and also increase the quality of triage. Utilizing these tools will assist in fatigue, improve workflow and internal processes through automated and enrichment of IOCs.
 ---
 
 ## Reusable Template 1
@@ -181,10 +181,10 @@ Build on that foundation by learning about the tools that enable deeper analysis
 
 ## Key Takeaways
 
-- **[Takeaway 1]** — The use of external tools automates IOC enrichment and quickens triage by substantial amount, however the fundamentals is still required to fully utilize such tools to its maximum effectiveness.
+- **[Takeaway 1]** — 
 
 ### Practical Application
-In a live SOC environment, 3rd party tools and services significantly reduces the time to execute a triage and also increase the quality of triage. Utilizing these tools will assist in fatigue, improve workflow and internal processes through automated and enrichment of IOCs.
+
 ---
 
 

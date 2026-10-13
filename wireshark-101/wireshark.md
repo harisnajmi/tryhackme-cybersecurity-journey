@@ -2,8 +2,7 @@
 ## 1. Wireshark 101
 
 ## Overview
-
-### Objective
+Learn the basics of packet analysis through hands-on labs using Wireshark and its features. Understand the basics of what to look for during packet analysis for common protocols.
 
 ## Tools Used
 
@@ -34,8 +33,6 @@
 
 - **Takeaway 1** — Use arp.opcode == 1 for request, arp.ipcode == 2 for reply. Quick filters
 
-### Practical Application
-
 ---
 ## 2. IMCP Traffic
 
@@ -58,8 +55,6 @@
 
 - **Takeaway 1** — ICMP Type 0 (reply) and Type 8 (request). Code also matters. Worth keeping in my when analyzing packets as to what it means.
 
-### Practical Application
-
 ---
 
 ## 3. DNS Traffic
@@ -78,8 +73,6 @@
 ## Key Takeaways
 
 - **Takeaway 1** — Keep in mind Query-Response, DNS-Servers Only and UDP.
-
-### Practical Application
 
 ---
 
@@ -108,19 +101,17 @@
 
 - **Takeaway 1** — Can use Protocol Heirarchy to organize present protocols for threat hunting to identify discrepancies in packet captures. (Statistic > Protocol Hierarchy). To organize all requested URLs in the capture use Export Objects HTTP. (File > Export Object > HTTP). To organize by Endpoints within the capture use Endpoints in Statistics (Statistics > Endpoints)
 
-### Practical Application
-
 ---
 
 ## 5. HTTPS Traffic
 
-### Task 1 — 
+### Task 1 — Full request URI for packet 31
 ![](screenshots/17full-request-url-packet-31.png)
 
-### Task 2 — 
+### Task 2 — Full request URI for packet 50
 ![](screenshots/18full-request-url-packet-50.png)
 
-### Task 3 — 
+### Task 3 — User-Agent listed in packet 50
 ![](screenshots/19agent-packet-50.png)
 
 ---
@@ -128,8 +119,6 @@
 ## Key Takeaways
 
 - **Takeaway 1** — Encrypted packets can be viewed by using RSA key. (Edit > Preferences > Protocols > TLS >  [+])
-
-### Practical Application
 
 ---
 
@@ -142,14 +131,16 @@
 ### Task 2 — Secretsdump SMB Analysis
 ![](screenshots/21secretsdump-smb.png)
 
-
 ---
 
 ## Key Takeaways
 
-- **Takeaway 1** — 
+- **Takeaway 1** — Packet analysis requires familiarity, practice and extensive knowledge of its contents. The data can be overwhelming, there must be a plan of action before beginning investigation.
+- **Takeaway 2** — Utilize Wireshark features such as display filters, export objects and statistics to quicken the process to detect anomalies and threat hunting.
 
 ### Practical Application
+
+Packet analysis is a crucial aspect in cybersecurity and it offers a wealth information of an attack. Understanding and mastering the know-hows of packet analysis will ensure a significant edge in defensive capabilities. In a live SOC environment, this skillset will be invaluable. 
 
 ---
 

@@ -70,16 +70,16 @@ Build on that foundation by learning about the tools that enable deeper analysis
 
 | Tool | Purpose |
 |---|---|
-| Messageheader | analyze email headers |
-| IPinfo | gathering information about an IP address |
-| URLScan.io | safely investigate websites without visiting them directly |
-| Talos | tool from Cisco that enables analysts to assess the reputation of IP |
-| URL extraction tool | automatically parse all embedded links |
-| sha256sum | generate a hash value for further analysis and reputation checks |
-| VirusTotal | check the reputation of files, URLs, IP addresses, and domains |
-| ANY.RUN | interactive malware sandbox |
-| JOESandbox | advanced malware analysis |
-| PhishTool | centralized view of phishing activity, automates much of the manual work involved in analyzing suspicious emails |
+| Messageheader | Analyze email headers |
+| IPinfo | Gathering information about an IP address |
+| URLScan.io | Safely investigate websites without visiting them directly |
+| Talos | Tool from Cisco that enables analysts to assess the reputation of IP |
+| URL extraction tool | Automatically parse all embedded links |
+| sha256sum | Generate a hash value for further analysis and reputation checks |
+| VirusTotal | Check the reputation of files, URLs, IP addresses, and domains |
+| ANY.RUN | Interactive malware sandbox |
+| JOESandbox | Advanced malware analysis |
+| PhishTool | Centralized view of phishing activity, automates much of the manual work involved in analyzing suspicious emails |
 
 ---
 
@@ -95,10 +95,10 @@ Build on that foundation by learning about the tools that enable deeper analysis
 ![](screenshots/08received-from-ip.png)
 
 ### Task 4 — Domain of interest from Return-Path
-![](screenshots/09copy-shortened-url.png)
+![](screenshots/10domain-of-interest.png)
 
 ### Task 5 — Shortened URL of "Update Account Now"
-![](screenshots/10domain-of-interest.png)
+![](screenshots/09copy-shortened-url.png)
 
 ## Phishing Case 2: Update Payment Details Analysis
 
@@ -181,10 +181,10 @@ Build on that foundation by learning about the tools that enable deeper analysis
 
 ## Key Takeaways
 
-- **[Takeaway 1]** — 
+- **[Takeaway 1]** — The use of external tools automates IOC enrichment and quickens triage by substantial amount, however the fundamentals is still required to fully utilize such tools to its maximum effectiveness.
 
 ### Practical Application
-
+In a live SOC environment, 3rd party tools and services significantly reduces the time to execute a triage and also increase the quality of triage. Utilizing these tools will assist in fatigue, improve workflow and internal processes through automated and enrichment of IOCs.
 ---
 
 

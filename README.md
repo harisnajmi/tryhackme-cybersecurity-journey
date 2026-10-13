@@ -11,9 +11,10 @@ The goal is to consolidate my technical knowledge, document investigation method
 - **SOC Fundamentals (Completed, No Documentation)** — SIEM concepts, log analysis, alert triage, and security monitoring.
 - **Phishing Analysis (WIP, Partial Documentation)** — Email investigation, malicious URL identification, and email header analysis.
 - **Network Traffic Analysis (Pending)** — Packet inspection, DNS analysis, and suspicious network activity.
-- **Malware Analysis (Pending)** — File analysis, malware behavior, and indicators of compromise (IOCs).
-- **Threat Intelligence (Pending)** — IOC enrichment, threat research, and MITRE ATT&CK mapping.
-- **Incident Response (Pending)** — Incident investigation, documentation, and containment strategies.
+- **Network Security Monitoring (Pending)** — network security, monitoring, footprints for potential network-based attacks
+- **Malware Concepts for SOC (Pending)** — File analysis, malware behavior, and indicators of compromise (IOCs).
+- **Threat Analysis Tools (Pending)** — IOC enrichment, threat research, and MITRE ATT&CK mapping.
+- **SIEM Triage for SOC** — Early detection, investigate SOC alerts, correlate logs to build incident timeline.
 
 ## Repository Structure
 
@@ -21,10 +22,11 @@ The goal is to consolidate my technical knowledge, document investigation method
 tryhackme-cybersecurity-journey/
 ├── README.md
 ├── phishing-analysis/
-├── malware-analysis/
+├── malware-concept-for-soc/
 ├── network-traffic-analysis/
-├── threat-intelligence/
-├── incident-response/
+├── network-security-monitoring/
+├── siem-triage-for-soc/
+├── threat-analysis-tools/
 └── wireshark-101/
 ```
 

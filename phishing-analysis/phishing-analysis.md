@@ -149,6 +149,69 @@ In a live SOC environment, 3rd party tools and services significantly reduces th
 
 ---
 
+## 3. Analyzing SMTP Responses
+
+### Objective
+- Analyze a PCAP file with SMTP traffic. Some familiarity with traffic analysis using Wireshark will be helpful, as well as knowledge of SMTP Wireshark filters and status codes.
+## Tools Used
+
+| Tool | Purpose |
+|---|---|
+| Wireshark | Packet analysis |
+
+---
+
+## Tasks
+
+### Task 1 — Number of packets with 220 Service ready
+![](screenshots/22smtp-service-ready-packets.png)
+
+### Task 2 — Response code returned by the server for email blocked by spamhouse.org
+![](screenshots/23spamhaus-error-code.png)
+
+### Task 3 — The full response code for the packet in previous task.
+![](screenshots/24response-code-packet-156.png)
+
+### Task 4 — Number of messages blocked with error 552, it represents potential security issues.
+
+![](screenshots/25total-messages-blocked-552.png)
+
+---
+
+## 4. Inspecting Emails and Attachments
+
+### Objective
+- Move beyond SMTP status codes and responses and begin analyzing SMTP traffic using the same traffic capture from the task above.
+- Utilize the Internet Message Format (IMF) to examine the inner details of emails, such as sender and recipient fields, content type, and attachments.
+## Tools Used
+
+| Tool | Purpose |
+|---|---|
+| Wireshark | Packet analysis |
+
+---
+
+## Tasks
+
+### Task 1 —  SMTP packets are available for analysis
+![](screenshots/26total-smtp-packets.png)
+
+### Task 2 — Name of the attachment in packet 270
+![](screenshots/27attachment-packet-270.png)
+
+### Task 3 — Host IP address that is making the message undeliverable
+![](screenshots/28host-ip-packet-270.png)
+
+### Task 4 — Email client with attachment.scr thats using SMTP/IMF protocol.
+
+![](screenshots/29imf-email-client.png)
+
+### Task 5 — Encoding is used for this potentially malicious attachment
+
+![](screenshots/30encoding-used.png)
+
+---
+
 ## Reusable Template 1
 ## x. Title/Room
 

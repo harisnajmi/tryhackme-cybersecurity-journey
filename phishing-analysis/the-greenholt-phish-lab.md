@@ -34,7 +34,7 @@ A sales executive at Greenholt PLC has reported a suspicious email received from
 - Identified the Sender's display name.
 
 ### Task 3 — Continue investigating the email headers.
-What is the sender's email address?
+### What is the sender's email address?
 ![](screenshots/33sender-email-address.png)
 
 - Identified the Sender's email address.
@@ -46,28 +46,28 @@ What is the sender's email address?
 - Utilize View > Message Source and locate the Reply-To field to identify the email address.
 
 ### Task 5 — Begin analyzing the message source.
-What is the originating IP address of this email?
+### What is the originating IP address of this email?
 
 ![](screenshots/35sender-ip-address.png)
 
 - Identified the originating IP address within message source. Double confirmed with Contact Analysis section of the message source.
 
 ### Task 6 — Investigate the IP address from the previous question.
-Who is the owner of the originating IP?
+### Who is the owner of the originating IP?
 
 ![](screenshots/36domain-owner.png)
 
 - Lookup IP in VirusTotal to acquire more details regarding the IP such as the owner name.
 
 ### Task 7 — Run an SPF record check on the Return-Path domain identified in the email headers.
-What is the full SPF record for this domain?
+### What is the full SPF record for this domain?
 
 ![](screenshots/37spf-record.png)
 
 - Perform SPF record check to retrieve the full SPF record for the domain.
 
 ### Task 8 — Perform a DMARC lookup for the Return-Path domain found in the email headers.
-What is the complete DMARC record for this domain?
+### What is the complete DMARC record for this domain?
 
 ![](screenshots/38dmarc-record.png)
 
@@ -80,21 +80,21 @@ What is the complete DMARC record for this domain?
 - Located attachment name using the content disposition field.
 
 ### Task 10 — Download the attachment to your virtual environment.
-Using the sha256sum command, what is the SHA256 hash of the file?
+### Using the sha256sum command, what is the SHA256 hash of the file?
 
 ![](screenshots/40malicious-file-hash.png)
 
 - Created a folder to put the downloaded malicious file. Use CLI to output the hash of the zip.
 
 ### Task 11 — Investigate the file hash from the previous question using VirusTotal.
-What is the attachment's file size in KB (e.g., 122.31 KB)?
+### What is the attachment's file size in KB (e.g., 122.31 KB)?
 
 ![](screenshots/41malicious-file-size.png)
 
 - Lookup the hash of the zip on VirusTotal to acquire information about its bit size.
 
 ### Task 12 — Continue your research on the file.
-What is the actual file type of the attachment?
+### What is the actual file type of the attachment?
 
 ![](screenshots/42malicious-file-type.png)
 

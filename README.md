@@ -25,7 +25,7 @@ tryhackme-cybersecurity-journey/
 ├── network-traffic-analysis/
 ├── threat-intelligence/
 ├── incident-response/
-└── skills-and-tools/
+└── wireshark-101/
 ```
 
 Each topic folder contains relevant learning notes, investigation methodologies, findings, and screenshots where applicable.

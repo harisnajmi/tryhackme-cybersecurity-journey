@@ -14,10 +14,10 @@ A sales executive at Greenholt PLC has reported a suspicious email received from
 
 | Tool | Purpose |
 |---|---|
-| VirusTotal | Used for |
-| SPF Checker | Used for |
-| DMARC checker | Used for |
-| VirusTotal | Used for |
+| VirusTotal | Check reputation of IP, File, Hashes etc. |
+| SPF Lookup | Check SPF record |
+| DMARC Lookup | Check DMARC record |
+| sha256sum | Generate hash for analysis |
 
 ---
 

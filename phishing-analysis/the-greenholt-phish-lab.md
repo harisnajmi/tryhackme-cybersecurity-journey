@@ -110,4 +110,5 @@ A sales executive at Greenholt PLC has reported a suspicious email received from
 ### Practical Application
 
 In a live SOC environment, utilizing all available tools at your disposal for identification, enrichment and contextualization is crucial as an SOC analyst. It allows a better understanding of the threat, how to escalate and remediate. Understanding the components of an email from delivery, makeup and contents is essential skill to any SOC analyst. This lab allows me to apply what I have learned so far in practical manner and controlled-environment.
+
 ---

@@ -1,5 +1,5 @@
 
-## 1. Wireshark 101
+## Wireshark 101
 
 ## Overview
 Learn the basics of packet analysis through hands-on labs using Wireshark and its features. Understand the basics of what to look for during packet analysis for common protocols.

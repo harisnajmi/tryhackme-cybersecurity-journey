@@ -53,7 +53,7 @@ Learn the basics of packet analysis through hands-on labs using Wireshark and it
 
 ## Key Takeaways
 
-- **Takeaway 1** — ICMP Type 0 (reply) and Type 8 (request). Code also matters. Worth keeping in my when analyzing packets as to what it means.
+- **Takeaway 1** — ICMP Type 0 (reply) and Type 8 (request). Code also matters. Worth keeping in mind when analyzing packets as to what it means.
 
 ---
 

@@ -131,6 +131,7 @@ Learn the basics of packet analysis through hands-on labs using Wireshark and it
 ### Task 2 — Secretsdump SMB Analysis
 ![](screenshots/21secretsdump-smb.png)
 
+- This is a short activity that requires filter to identify the abuse of protocols by an exploit. 
 ---
 
 ## Key Takeaways

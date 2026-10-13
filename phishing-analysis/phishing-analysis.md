@@ -102,7 +102,7 @@ Build on that foundation by learning about the tools that enable deeper analysis
 
 ## Phishing Case 2: Update Payment Details Analysis
 
-### Task 1 — ANYRUN classify this suspected phishing email as 
+### Task 1 — ANYRUN classify this suspected phishing email as suspicious
 ![](screenshots/11anyrun-classification.png)
 
 ### Task 2 — Name of malicious PDF attachment

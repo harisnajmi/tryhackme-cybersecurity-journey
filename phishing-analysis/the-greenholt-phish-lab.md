@@ -84,7 +84,7 @@ A sales executive at Greenholt PLC has reported a suspicious email received from
 
 ![](screenshots/40malicious-file-hash.png)
 
-- Created a folder to put the downloaded malicious file. Use CLI to output the hash of the zip.
+- Created a folder to put the downloaded malicious file. Use CLI to output the hash of the zip. I was struggling to type the full name, so I looked up how to cycle between directory or files within the folder. Input the first few letters of the file I wanted and press TAB to autocomplete to the nearest match. 
 
 ### Task 11 — Investigate the file hash from the previous question using VirusTotal.
 ### What is the attachment's file size in KB (e.g., 122.31 KB)?

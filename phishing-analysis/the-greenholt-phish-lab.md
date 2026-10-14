@@ -31,13 +31,13 @@ A sales executive at Greenholt PLC has reported a suspicious email received from
 ### Task 2 — What is the display name of the sender?
 ![](screenshots/32sender-display-name.png)
 
-- Identified the Sender's display name.
+- Identified the Sender's display name. A mismatch of display name and and email address are first indicators of a phishing attempt.
 
 ### Task 3 — Continue investigating the email headers.
 ### What is the sender's email address?
 ![](screenshots/33sender-email-address.png)
 
-- Identified the Sender's email address.
+- Identified the Sender's email address. 
 
 ### Task 4 — What email address will receive a reply to this email?
 
@@ -50,7 +50,7 @@ A sales executive at Greenholt PLC has reported a suspicious email received from
 
 ![](screenshots/35sender-ip-address.png)
 
-- Identified the originating IP address within message source. Double confirmed with Contact Analysis section of the message source.
+- Identified the originating IP address using Received field within message source. Double confirmed with Contact Analysis section of the message source.
 
 ### Task 6 — Investigate the IP address from the previous question.
 ### Who is the owner of the originating IP?

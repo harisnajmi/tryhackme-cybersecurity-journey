@@ -10,7 +10,7 @@ The goal is to consolidate my technical knowledge, document investigation method
 
 - **SOC Fundamentals (Completed, No Documentation)** — SIEM concepts, log analysis, alert triage, and security monitoring.
 - **Phishing Analysis (Completed)** — Email investigation, malicious URL identification, and email header analysis.
-- **Network Traffic Analysis (Pending)** — Packet inspection, DNS analysis, and suspicious network activity.
+- **Network Traffic Analysis (80% Completed)** — Packet inspection, DNS analysis, and suspicious network activity.
 - **Network Security Monitoring (Pending)** — network security, monitoring, footprints for potential network-based attacks
 - **Malware Concepts for SOC (Pending)** — File analysis, malware behavior, and indicators of compromise (IOCs).
 - **Threat Analysis Tools (Pending)** — IOC enrichment, threat research, and MITRE ATT&CK mapping.

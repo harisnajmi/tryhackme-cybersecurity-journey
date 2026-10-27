@@ -174,11 +174,9 @@ Investigate and correlate the packet-level information to see the big picture in
 1. TCP Connect Scan ( Open TCP port, SYN inbound > SYN-ACK outbound > ACK inbound > RST-ACK inbound )
 2. TCP Closed Port ( Close TCP port SYN inbound > RST-ACK outbound )
 3. nmap -sT command , byte > 1024 , RST-ACK required, non-privileged user
-
 4. TCP SYN Scan ( Open TCP Port, SYN inbound > SYN-ACK outbound > RST inbound )
 5. TCP SYN SCan ( Close TCP Port, SYN inbound > RST-ACK outbound )
 6. nmap -sS command , byte <= 1024 , no RST-ACK required , privileged user
-
 7. UDP Scan (Open UDP port, UDP packet inbound)
 8. UDP Scan (Close UDP Port, UDP packet inbound, ICMP Type 3 Code 3 message ( Unreachable, port unreacheable ) 
 
@@ -238,9 +236,7 @@ Investigate and correlate the packet-level information to see the big picture in
 4. DHCP ACK options (15 Domain Name, 51 Assigned IP lease time)
 5. "DHCP NAK"packets represent denied requests (dhcp.option.dhcp == 6)
 6.  DHCP NAK option (56 Message (rejection details))
-
 7.  NBNS, query details  could contain "name, Time to live (TTL) and IP address details" (nbns.name contains "keyword")
-
 8.  Kerberos User account search (kerberos.CNameString and !(kerberos.CNameString contains "$" ))
 9.  Kerberos protocol version (kerberos.pvno == 5)
 10. Kerberos realm:Domain name for the generated ticket (kerberos.realm contains ".org")

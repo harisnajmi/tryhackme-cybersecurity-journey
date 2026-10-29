@@ -282,41 +282,91 @@ Investigate and correlate the packet-level information to see the big picture in
 
 ## FTP
 
-### Task 1 — 
-![](screenshots/insertname.png)
+## Notes
 
-### Task 2 — 
-![](screenshots/insertname.png)
+1. ftp.response.code == xxx
+2. x1x series (Information request responses), x2x (Connection messages) and x3x series (Authentication messages)
+3. x1x examples, 211 (System Status), 212 (Directory Status) and 213 (File Status)
+4. x2x examples, 220 (Service ready), 227 (Entering passive mode), 228 (Long passive mode) and 229 (Extended passive mode)
+5. x3x examples, 230 (User login), 231 (User logout), 331 (Valid username), 430 (Invalid username or password) and 530 (No login, invalid password)
+6. FTP commands examples, USER, PASS, CWD and LIST. (fttp.request.command == "commands", fttp.request.arg == "password"
+7. Bruteforce signals (ftp.response.code == 530, failed login attempts), ((ftp.response.code == 530) and (ftp.response.arg contains "username"), list target username) and ((ftp.request.command == "PASS" ) and (ftp.request.arg == "password"), list targets for a static password)
 
-### Task 3 — 
-![](screenshots/insertname.png)
+### Task 1 — How many incorrect login attempts are there?
+![](screenshots/32total-incorrect-logins.png)
 
-### Task 4 — 
+### Task 2 — What is the size of the file accessed by the "ftp" account?
+![](screenshots/33file-size-accessed.png)
 
-![](screenshots/insertname.png)
+### Task 3 — The adversary uploaded a document to the FTP server. What is the filename?
+![](screenshots/33file-size-accessed.png)
+
+### Task 4 — The adversary tried to assign special flags to change the executing permissions of the uploaded file. What is the command used by the adversary?
+![](screenshots/34change-permission-attempt.png)
 
 ---
+
+## HTTP
+
+## Notes
+
+1. http request methods, GET, POST.
+2. Common http response code 200 (Successful), 301 (Moved permanently), 302 (Moved temporarily), 400 (Bad request), 401 (Unauthorized), 403 (Forbidden), 404 (Not found), 405 (Method not allowed), 4408 (Request timeout), 500 (Internal server error) and 503 (Service unavailable).
+3. HTTP parameter, user agent, browser and os identification to a web server app (http.user.agent contains "xx")
+4. HTTP parameter, request uri, points the requested resource from the server (http.request.uri contains "xx")
+5. HTTP parameter, full uri, complete uri information (http.request.full.uri contains "xx")
+6. HTTP parameter, server (http.server contains "xx"), host (http.host contains "xx"), connection (http.connection == "Keep-Alive"), line-based text data (data-text-lines contains "xx")
+7. Known low-hanging fruits for user agent analysis (sqlmap, nmap, wfuzz and nikto)
+8. Known low-hanging fruit for Log4j (request method POST, ip/frame contains "jndi" or "Exploit", user agent contains "$" or "==")
+
+### Task 1 — Investigate the user agents. What is the number of anomalous  "user-agent" types?
+![](screenshots/35sus-agent-sqlmap.png)
+![](screenshots/36sus-agent-wfuzz.png)
+![](screenshots/37sus-agent-nmap.png)
+![](screenshots/38sus-agent-rev68.png)
+![](screenshots/39sus-agent-windows64.png)
+![](screenshots/40sus-agent-jndi.png)
+
+### Task 2 — What is the packet number with a subtle spelling difference in the user agent field?
+![](screenshots/41subtle-spelling-error.png)
+
+### Task 3 — Locate the "Log4j" attack starting phase. What is the packet number?
+![](screenshots/42log4j-initial-attack.png)
+
+### Task 4 — Locate the "Log4j" attack starting phase and decode the base64 command. What is the IP address contacted by the adversary? (Enter the address in defanged format and exclude "{}".)
+![](screenshots/43base64-encoding.png)
+![](screenshots/44decoded-ip.png)
+
 
 ## HTTPS
 
-### Task 1 — 
-![](screenshots/insertname.png)
+## Notes
 
-### Task 2 — 
-![](screenshots/insertname.png)
+1. HTTPS Parameter, Request (http.request), TLS (tls), TLS client request (tls.handshake.type == 1), TLS Server response (tls.handshake.type == 2), Local Simple Service Discovery Protocol (ssdp)
+2. Client Hello (http.request or tls.handshake.type == 1) and !(ssdp)
+3. Server Hello (http.request or tls.handshake.type == 2) and !(ssdp)
 
-### Task 3 — 
-![](screenshots/insertname.png)
+### Task 1 — What is the frame number of the "Client Hello" message sent to "accounts.google.com"?
+![](screenshots/45client-hello-accounts-google-frame.png)
 
-### Task 4 — 
+- Packet Details Pane > TLS > Handshake Protocol > Extension: Server Name for Client Hello, double verified with resolved address for IP 172.217.17.237 by searching accounts.google
 
-![](screenshots/insertname.png)
+### Task 2 — Decrypt the traffic with the "KeysLogFile.txt" file. What is the number of HTTP2 packets?
+![](screenshots/46total-http2-packets.png)
+
+### Task 3 — Go to Frame 322. What is the authority header of the HTTP2 packet? (Enter the address in defanged format.)
+![](screenshots/47authority-header.png)
+
+### Task 4 — Investigate the decrypted packets and find the flag! What is the flag?
+![](screenshots/48flag.png)
+
+- Export decrypted traffic of Frame 322 as HTTP Object. Open the file to retrieve the flag
 
 ---
-## Key Takeaways
 
-- **Takeaway 1** — 
+## Key Takeaway
 
-### Practical Application
+- **Takeaway** — Network Traffic analysis skills is an essential high-level skill useful in reconstructing timeline of events and investigation. Logs recording can be modified and deleted with user intervention and escalated privileges, network logs are more difficult to manipulate. For L1 it might not be a day-to-day skill, however for L2 and above that requires threat hunting, forensic and investigation of threats. This would be a day-to-day skill and it would require extensive understanding and significant amount of time hands-on with packet analyzing. 
+
 
 ---

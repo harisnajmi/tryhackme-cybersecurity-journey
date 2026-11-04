@@ -1,4 +1,4 @@
-<img width="1076" height="771" alt="image" src="https://github.com/user-attachments/assets/4e02ff37-888d-4ada-ac3f-9bb8e56fe6ca" />
+
 ### Data Exfiltration Detection
 
 ## Overview

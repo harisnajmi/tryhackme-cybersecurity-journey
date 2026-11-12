@@ -40,24 +40,30 @@ In this room, we'll learn the fundamentals of Man-in-the-Middle (MITM) attacks a
 5. Gateway Redirection Patterns: Multiple destination MACs for the same gateway IP.
 6. ARP Probe / Reply Loops: Many ARP requests with Who has 192.168.1.x? Tell 192.168.1.y patterns.
 
-### Task 1 — 
-![](screenshots/insert.png)
+### Task 1 — How many ARP packets from the gateway MAC Address were observed?
+![](screenshots/12arp-packets-gateway.png)
 
-- 
+- Filtered ARP and the initial source mac address in the packet capture. 
 
-### Task 2 — 
-![](screenshots/insert.png)
+### Task 2 — What MAC address was used by the attacker to impersonate the gateway?
+![](screenshots/13attacker-mac-addr.png)
 
-- 
-### Task 3 — 
-![](screenshots/insert.png)
+- Search arp.opcode == 2 for the gateway address, identify "alternatives" mac address for the gateway.
 
-- 
+### Task 3 — How many Gratuitous ARP replies were observed for 192.168.10.1?
+![](screenshots/14gateway-gratuitous-reply.png)
 
-### Task 4 — 
-![](screenshots/insert.png)
+- Filter for arp.isgratuitous and gateway address, only 2 packets were found.
 
-- 
+### Task 4 — How many unique MAC addresses claimed the same IP (192.168.10.1)?
+![](screenshots/15total-unique-mac-for-gateway.png)
+
+- Search arp.opcode == 2 for the gateway address, count total unique mac address for the gateway.
+
+### Task 5 — How many ARP spoofing packets were observed in total from the attacker?
+![](screenshots/16total-arp-spoofing-packets.png)
+
+- filtered for arp.opcode == 2, gateway ip address and the mac address of the attacker. Total 14 counts of packet
 
 ---
 

@@ -63,8 +63,61 @@ In this room, we'll learn the fundamentals of Man-in-the-Middle (MITM) attacks a
 ### Task 5 — How many ARP spoofing packets were observed in total from the attacker?
 ![](screenshots/16total-arp-spoofing-packets.png)
 
-- filtered for arp.opcode == 2, gateway ip address and the mac address of the attacker. Total 14 counts of packet
+- Filtered for arp.opcode == 2, gateway ip address and the mac address of the attacker. Total 14 counts of packet
 
+### DNS Spoofing
+
+### IoCs
+
+1. Multiple DNS responses for the same query: A legitimate resolver and a forged responder reply to the same query. This is the single most reliable indicator.
+2. DNS response from an unexpected source: A DNS reply arrives from an IP address that does not match any configured resolver (like 8.8.8.8 or your DNS server).
+3. Suspiciously short TTL (Time-To-Live) values: Attackers use very low TTLs (1 - 30s) to keep poisoned entries short-lived and reassert control.
+4. Unsolicited DNS responses: A DNS reply appears without a corresponding DNS request from the victim.
+
+### Task 1 — How many DNS responses were observed for the domain corp-login.acme-corp.local?
+![](screenshots/17total-dns-response.png)
+
+- Filtered for DNS response request with query that contains the URL.
+
+### Task 2 — How many DNS requests were observed from the IPs other than 8.8.8.8?
+![](screenshots/18alternative-ip-dns-req.png)
+
+- Filtered DNS requests with source IP does not equal to 8.8.8.8 and still contained the query from previous task.
+
+### Task 3 — What IP did the attacker’s forged DNS response return for the domain?
+![](screenshots/19ip-attacked-domain.png)
+
+- Identified the source IP that is not 8.8.8.8
+
+### SSL Stripping
+
+### IoCs
+
+1. Initial Request vs. Response: The user's initial request may be for HTTPS (port 443), but the subsequent packets immediately shift to unencrypted HTTP (port 80) for the same domain.
+2. Redirects/Link Rewriting: Monitoring for redirects (HTTP Status Codes 301, 302) that persistently direct an HTTPS request to an HTTP resource.
+3. Certificate Errors: Although the attacker usually tries to hide this, the initial TLS/SSL Handshake may fail or display a self-signed certificate if the attacker uses a more direct proxying technique.
+
+### Task 1 — How many POST requests were observed for our domain corp-login.acme-corp.local?
+![](screenshots/20total-post-requests.png)
+
+- Due to SSL stripping affectively change the protocol used after compromise, filter for HTTP with the respective attacker domain from previous task.
+
+### Task 2 — What's the password of the victim found in the plaintext after successful ssl stripping attack. 
+![](screenshots/21http-password-login.png)
+
+- Identify the exposed credentials.
+
+## Summary 
+
+1.1 ARP Spoofing (cache poisoning):
+      1.1.1 ARP spoof begins, attacker sends unsolicited ARP is-at claiming gateway IP.
+2.1 DNS Spoofing (forged DNS responses):
+      2.1.1 Victim DNS query for corp-login.acme-corp.local.
+      2.1.2 Forged DNS response from attacker, answers domain → 192.168.10.55.
+3.1 SSL Stripping (TLS downgrade / credential capture):
+      3.1.1 The Victim initiates connection to resolved IP, HTTP to attacker (SSL stripping effect).
+      3.1.2 Credential POST observed (cleartext).
+      
 ---
 
 ## Key Takeaways

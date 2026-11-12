@@ -109,14 +109,14 @@ In this room, we'll learn the fundamentals of Man-in-the-Middle (MITM) attacks a
 
 ## Summary 
 
-1.1 ARP Spoofing (cache poisoning):
-      1.1.1 ARP spoof begins, attacker sends unsolicited ARP is-at claiming gateway IP.
-2.1 DNS Spoofing (forged DNS responses):
-      2.1.1 Victim DNS query for corp-login.acme-corp.local.
-      2.1.2 Forged DNS response from attacker, answers domain → 192.168.10.55.
-3.1 SSL Stripping (TLS downgrade / credential capture):
-      3.1.1 The Victim initiates connection to resolved IP, HTTP to attacker (SSL stripping effect).
-      3.1.2 Credential POST observed (cleartext).
+- ARP Spoofing (cache poisoning):
+- ARP spoof begins, attacker sends unsolicited ARP is-at claiming gateway IP.
+- DNS Spoofing (forged DNS responses):
+- Victim DNS query for corp-login.acme-corp.local.
+- Forged DNS response from attacker, answers domain → 192.168.10.55.
+- SSL Stripping (TLS downgrade / credential capture):
+- The Victim initiates connection to resolved IP, HTTP to attacker (SSL stripping effect).
+- Credential POST observed (cleartext).
       
 ---
 

@@ -46,11 +46,9 @@ Eg. alert tcp any any <> any 80  (msg: "GET Request Found"; content:"GET"; fast_
 24. Non-Payload Detection - Dsize - Filtering the packet payload size. (dsize:min<>max;, dsize:>100, dsize:<100) Eg. alert ip any any <> any any (msg: "SEQ TEST"; dsize:100<>300;  sid: 100001; rev:1;)
 25. Non-Payload Detection - Sameip - Filtering the source and destination IP addresses for duplication. Eg. alert ip any any <> any any (msg: "SAME-IP TEST";  sameip; sid: 100001; rev:1;)
 
-### Notes/IoCs
+---
 
-1. 
-
-### Task 1 Use "task9.pcap". Write a rule to filter IP ID "35369" and run it against the given pcap file. What is the request name of the detected packet? You may use this command: "snort -c local.rules -A full -l . -r task9.pcap"
+## Task 1 Use "task9.pcap". Write a rule to filter IP ID "35369" and run it against the given pcap file. What is the request name of the detected packet? You may use this command: "snort -c local.rules -A full -l . -r task9.pcap"
 ![](screenshots/41id-33569-rule-creation.png)
 ![](screenshots/42alert-id-33569.png)
 ![](screenshots/43read-alert-timestamp-request.png)
@@ -62,19 +60,19 @@ Eg. alert tcp any any <> any 80  (msg: "GET Request Found"; content:"GET"; fast_
 - Run the pcap file against local rules. (sudo snort -c local.rules -A full -l . -r task9.pcap)
 - Read the alert file (sudo snort -r snort.log.1794634573 -X)
 
-### Task 2 — Clear the previous alert file and comment out the old rules. Create a rule to filter packets with Syn flag and run it against the given pcap file. What is the number of detected packets?
+## Task 2 — Clear the previous alert file and comment out the old rules. Create a rule to filter packets with Syn flag and run it against the given pcap file. What is the number of detected packets?
 ![](screenshots/44syn-alert-rule.png)
 ![](screenshots/45total-syn-alerts.png)
 
 - Repeat the previous steps with the new rule for Syn flag
 
-### Task 3 — Clear the previous alert file and comment out the old rules. Write a rule to filter packets with Push-Ack flags and run it against the given pcap file. What is the number of detected packets?
+## Task 3 — Clear the previous alert file and comment out the old rules. Write a rule to filter packets with Push-Ack flags and run it against the given pcap file. What is the number of detected packets?
 ![](screenshots/46push-ack-alert-rule.png)
 ![](screenshots/47total-push-ack-alert.png)
 
-- - Repeat the previous steps with the new rule for Push-Ack flag
+- Repeat the previous steps with the new rule for Push-Ack flag
 
-### Task 4 — Clear the previous alert file and comment out the old rules. Create a rule to filter UDP packets with the same source and destination IP and run it against the given pcap file. What is the number of packets that show the same source and destination address?
+## Task 4 — Clear the previous alert file and comment out the old rules. Create a rule to filter UDP packets with the same source and destination IP and run it against the given pcap file. What is the number of packets that show the same source and destination address?
 ![](screenshots/48same-ip-rule.png)
 ![](screenshots/49total-udp-alert.png)
 
